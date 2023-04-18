@@ -13,7 +13,7 @@ public class Party
         
         if (guests != null)
         {
-            _guests.AddRange(guests);
+            AddGuests(guests);
         }
     }
     
@@ -28,8 +28,8 @@ public class Party
     private readonly List<Guest> _guests = new();
     public IReadOnlyCollection<Guest> Guests => _guests.AsReadOnly();
     
-    public void AddGuest(Guest guest)
+    public void AddGuests(IEnumerable<Guest> guests)
     {
-        _guests.Add(guest);
+        _guests.AddRange(guests);
     }
 }
