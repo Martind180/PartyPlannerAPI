@@ -32,4 +32,9 @@ public class Party
     {
         _guests.AddRange(guests);
     }
+    
+    public void RemoveGuests(IEnumerable<Guid> guestIds)
+    {
+        _guests.RemoveAll(g => guestIds.Contains(g.Id));
+    }
 }
