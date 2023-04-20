@@ -15,7 +15,7 @@ public class RemoveGuestsEndpoint : Endpoint<RemoveGuestsRequest>
 
     public override void Configure()
     {
-        //Needs to be a post request even though we are deleting as we are deleting a collection of guests
+        //Needs to be a post request even though we are deleting as we are passing a collection of guestIds
         //And a delete request does not have a body for us to post the array of guestIds
         Post("api/party/{partyId}/guests-remove");
         Description(d => d.WithDescription("Remove guests from a party"));
