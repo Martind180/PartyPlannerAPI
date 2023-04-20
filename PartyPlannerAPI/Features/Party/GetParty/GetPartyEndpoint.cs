@@ -16,7 +16,7 @@ public class GetPartyEndpoint : Endpoint<GetPartyRequest, GetPartyResponse, GetP
 
     public override void Configure()
     {
-        Get("/api/party/{id}");
+        Get("/api/party/{PartyId}");
         Description(d => d.WithDescription("Get a party"));
         AllowAnonymous();
     }
