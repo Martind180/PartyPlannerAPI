@@ -3,7 +3,7 @@ using PartyPlannerAPI.Infrastructure.Persistence;
 
 namespace PartyPlannerAPI.Features.Party.UpdateParty;
 
-public class UpdatePartyEndpoint : Endpoint<UpdatePartRequest>
+public class UpdatePartyEndpoint : Endpoint<UpdatePartyRequest>
 {
     private readonly PartyPlannerDbContext _context;
 
@@ -19,7 +19,7 @@ public class UpdatePartyEndpoint : Endpoint<UpdatePartRequest>
         AllowAnonymous();
     }
 
-    public override async Task HandleAsync(UpdatePartRequest req, CancellationToken ct)
+    public override async Task HandleAsync(UpdatePartyRequest req, CancellationToken ct)
     {
         var party = await _context.Parties.FindAsync(new object?[] { req.PartyId }, cancellationToken: ct);
 
