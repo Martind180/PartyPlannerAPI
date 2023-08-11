@@ -1,4 +1,5 @@
 global using FastEndpoints;
+global using FluentValidation;
 using FastEndpoints.Swagger;
 using Microsoft.EntityFrameworkCore;
 using PartyPlannerAPI.Infrastructure.Persistence;

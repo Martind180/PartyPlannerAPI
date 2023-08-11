@@ -28,7 +28,7 @@ public class UpdateGuestEndpoint : Endpoint<UpdateGuestRequest>
             await SendNotFoundAsync(ct);
         }
 
-        //TODO: Potentially include mapster for the cleaner mapping of properties to existing objects
+        //TODO: Potentially include mapster/automapper for the cleaner mapping of properties to existing objects
         guest.FirstName = req.Guest.FirstName;
         guest.LastName = req.Guest.LastName;
         guest.Age = req.Guest.Age;
