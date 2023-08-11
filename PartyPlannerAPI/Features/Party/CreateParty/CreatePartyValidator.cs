@@ -7,6 +7,7 @@ public class CreatePartyValidator : Validator<CreatePartyRequest>
 {
     public CreatePartyValidator()
     {
+        //TODO: Create a Party Dto validator
         RuleFor(x => x.Party.Name)
             .NotEmpty()
             .WithMessage("Party name cannot be empty");
@@ -23,7 +24,7 @@ public class CreatePartyValidator : Validator<CreatePartyRequest>
             .NotNull()
             .WithMessage("Please provide a venue");
         
-        //Venue validation
+        //TODO: Create a Venue dto validator
         RuleFor(x => x.Party.Venue.Name)
             .NotEmpty()
             .WithMessage("Venue name cannot be empty");
